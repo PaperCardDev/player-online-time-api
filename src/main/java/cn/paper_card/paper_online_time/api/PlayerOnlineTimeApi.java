@@ -10,7 +10,7 @@ public interface PlayerOnlineTimeApi {
     // 查询玩家的总计在线时长和进入次数
     @NotNull OnlineTimeAndJoinCount queryTotalOnlineAndJoinCount(@NotNull UUID uuid) throws Exception;
 
-    @NotNull OnlineTimeAndJoinCount queryTimeAndCountBetween(@NotNull UUID uuid, long begin, long end) throws Exception;
+    @NotNull OnlineTimeAndJoinCount queryTimeAndCount(@NotNull UUID uuid, long begin) throws Exception;
 
     // 增加玩家今天在线的时间
     boolean addOnlineTimeToday(@NotNull UUID player, long cur, long online) throws Exception;
